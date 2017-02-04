@@ -12,6 +12,14 @@ This weeks topic is on integrating Firebase with RN using
 ```langauge-bash
 npm install react-native-firestack --save
 react-native link react-native-firestack
+
+# For this example
+npm install react-native-camera --save
+react-native link react-native-camera
+```
+
+```langauge-plist
+Media
 ```
 
 ```language-jsx
@@ -27,17 +35,15 @@ import Camera from 'react-native-camera';
 import Firestack from 'react-native-firestack';
 
 const firebaseOptions = {
-
+  apiKey: "XXXXXXXXXXXX-XXXXXXXXXXX-XX-XXXXXXXXXXX",
+  authDomain: "XXXX.firebaseapp.com",
+  databaseURL: "https://XXXX.firebaseio.com",
+  storageBucket: "XXXX.appspot.com",
 };
 
 const firestack = new Firestack(firebaseOptions);
 
 export default UploadPhotoComponent extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   uploadCameraPhoto = () => {
     const uniqueId = Math.random().toString(36).substring(7);
