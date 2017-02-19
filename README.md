@@ -1,46 +1,44 @@
 # React Native Level Up News Letter
 
-**Scaffold for News Letter Creation and Backup**
+## Side Notes
 
-## Overview
+Got the original idea/content for this NL from https://www.facebook.com/groups/react.native.community/permalink/922838681185044/
 
-Each news letter should contain:
-  - A very specific topic on React Native or related libraries/services.
-  - Good SEO friendly title.
-  - GIF giving an overview of the topic.
-  - Minimal copy explaining the topic
+Around 02/19/2017 the React Native team released and officially supported start template that you can generate from the RN CLI.
 
-The plan is to queue a bunch of these up at once then release one a week.
+The code for the app in the GIF is not included in this library since it had to be generated separately I didn't want to spend extra time trying to fit it into this context.
 
-We want the news letters to be short and sweet. They should highlight one feature or concept. The code and copy should be as mininimal as possible to keep the news-letter casual and fun.
+You can reproduce the app with these commands though:
 
-I stole the structure from Umar Hansa's NL which I absolutely love https://umaar.com/dev-tips/
-
-## This Repo
-
-The basic idea here is we make branches for each specific top and edit this
-React Native project however we need to to create the GIF and test the code for
-that topic.
-
-```bash
-git checkout -b specific-topic
-git add .
-git commit -m "Initial commit 👶"
-git push origin specific-topic
+```
+react-native init MyApp --version 0.42.0-rc.2 --template navigation
+cd MyApp
+react-native run-ios
 ```
 
-## Also!
+## Content
 
-You must edit this README.md in your branch with the copy for the given News Letter. This
-allows us to archive all the content for any given news letter into nice
-little branches off of this main project :) Could also be very useful in the
-future if we have a nice base to fork from and expand on older news-letters
-wether that be for a more advanced follow-up news-letter or to spin one off
-into a blog post or something.
+![](react-native-level-up-01.gif)
 
-## Resources
+```html
+<h1>Introducing App Templates!</h1>
 
-**To get topic ideas from**
+<div class="p1">
+<pre>
+<code>
+react-native init MyApp --version 0.42.0-rc.2 --template navigation
+cd MyApp
+react-native run-ios
+</code></pre>
+</div>
 
-  - [Awesome React Native](https://github.com/jondot/awesome-react-native)
-  - [RN Changelog](https://github.com/facebook/react-native/releases)
+<p><span style="font-size:18px">Run the commands above&nbsp;then you&#39;ll be up and running with a sexy&nbsp;React Native template with a few basic scenes + navigation already set-up using the official <a href="https://reactnavigation.org/" target="_blank">react-navigation</a>.<br />
+<br />
+This&nbsp;template can&nbsp;also serve as a set of best practices on how to build React Native apps: folder structure, naming conventions, etc.</span><br />
+<br />
+You can check out the template code here: <a href="https://github.com/facebook/react-native/tree/master/local-cli/templates/HelloNavigation" target="_blank">https://github.com/facebook/react-native/tree/master/local-cli/templates/HelloNavigation</a><br />
+<br />
+Yours,<br />
+Tyler Buchea</p>
+
+```
