@@ -4,17 +4,17 @@
 
 ![gif](./expo.gif)
 
-😎 Fast Prototyping with Expo Snack 😎
+👁 AR in Minutes with RN & Expo 👁
 
-Expo is the technology backing [create-react-native-app](https://github.com/react-community/create-react-native-app) and their Snack service is basically a full fledged React Native development environment in the browser.
+Augmented Reality is all the rage right now with Apple releasing ARKit and Google's new ARCore. You can get in on the action too with React Native and Expo!
 
-It's a free service with killer features like:
-  - Drag and drop components
-  - Live reload on device or in browser
-  - Instant share-ability
+This stuff is still in early stages so an iOS device is required for this demo.
 
-Get started by signing up and creating your first "Snack".
+You can clone and start my repo:
+git clone git@github.com:tylerbuchea/ar-expo-cube.git
+cd ar-expo-cube
+npm install
+npm start
+Note: If you need to download the Expo viewer app or you don't want to bother setting up the repo I recommend going here:
 
-[https://snack.expo.io/](https://snack.expo.io/)
-
-Note: If you're worried about lock in don't be! You can always use create-react-native-app to eject into a regular React Native application setup.
+https://snack.expo.io/@tylerbuchea/basic-ar-with-three.js
