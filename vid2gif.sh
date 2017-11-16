@@ -13,19 +13,17 @@
 # -t    duration
 # -ss   position
 #
-function vid2gif2() {
-  local width=${2:-600}
-  local rate=${3:-20}
-  local filters="fps=$rate,scale=$width:-1:flags=lanczos"
+width=${2:-600}
+rate=${3:-20}
+filters="fps=$rate,scale=$width:-1:flags=lanczos"
 
-  # generate a palette
-  #
-  # not sure if palette needs scale or flags (or all of $filters?)...
-	ffmpeg -i "$1" -vf "$filters,palettegen" -y palette.png
+# generate a palette
+#
+# not sure if palette needs scale or flags (or all of $filters?)...
+ffmpeg -i "$1" -vf "$filters,palettegen" -y palette.png
 
-  # then generate gif with palette
-  ffmpeg -i "$1" -i palette.png -filter_complex "$filters,paletteuse" "${1%.*}.gif"
+# then generate gif with palette
+ffmpeg -i "$1" -i palette.png -filter_complex "$filters,paletteuse" "${1%.*}.gif"
 
-  # remove palette image file
-  rm palette.png
-}
+# remove palette image file
+rm palette.png
